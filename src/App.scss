@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: #f5f6fa;
+}
+
+.app {
+    margin: 10px 20px 0 20px;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    .left {
+        .header {
+            display: flex;
+
+            .logo-title {
+                display: flex;
+
+                .logo {
+                    width: 70px;
+                    height: 70px;
+                    margin-right: 10px;
+                }
+            }
+
+            .search-box {
+                margin-left: auto;
+                width: 400px;
+            }
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+
+            .info-box {
+                border-radius: 7px;
+                height: 250px;
+                width: 290px;
+                margin-bottom: 10px;
+                transition: all 0.5s;
+
+                .title-info-box {
+                    display: flex;
+                    justify-content: space-between;
+
+                    h2 {
+                        font-weight: 600;
+                    }
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                .detail-info-box {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 2px;
+
+                    h3 {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .info-box--selected {
+                border-top: 10px solid rgb(196, 85, 85);
+            }
+
+            .info-box:hover {
+                border-top: 10px solid rgb(226, 203, 71);
+                box-shadow: 3px 3px 22px rgb(117, 115, 115);
+            }
+        }
+
+        .map {
+            height: 390px;
+            margin-top: 5px;
+
+            .leaflet-container {
+                height: 100%;
+
+                .pop-up {
+                    img {
+                        width: 150px;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        margin-left: 20px;
+    }
+}
+
+.news {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    // background-color: #fff;
+    // border-radius: 10px;
+
+    .card-news {
+        flex: 0.32;
+        height: 550px;
+        overflow-y: auto;
+    }
+}
+
+.posters {
+    display: flex;
+    justify-content: space-between;
+    .poster {
+        flex: 0.32;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.video,
+.health-advice {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.health-advice {
+    img {
+        width: 100%;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #24292f;
+    color: #fff;
+    padding: 10px;
+
+    .made-by {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-left: 4px;
+            color: rgb(255, 6, 6);
+        }
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.MuiCardContent-root {
+    padding: 10px !important;
+}
+
+@media (max-width: 500px) {
+    .main-container {
+        grid-template-columns: 1fr;
+
+        .left {
+            .header {
+                flex-direction: column;
+
+                .logo {
+                    width: 70px;
+                    height: 70px;
+                }
+
+                .search-box {
+                    margin: 20px 0;
+                    width: 100%;
+                }
+            }
+
+            .cards {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 0px;
+
+                .info-box {
+                    border-radius: 7px;
+                    height: 250px;
+                    width: 290px;
+                    margin-bottom: 10px;
+                    transition: all 0.5s;
+
+                    .title-info-box {
+                        display: flex;
+                        justify-content: space-between;
+
+                        h2 {
+                            font-weight: 600;
+                        }
+
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+
+                    .detail-info-box {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 2px;
+
+                        h3 {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            .map {
+                height: 390px;
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
+
+        .right {
+            margin: 20px 0;
+
+            .MuiPaper-root {
+                width: 320px;
+            }
+        }
+    }
+
+    .news {
+        margin-top: 0px;
+        flex-direction: column;
+    }
+
+    .posters {
+        flex-direction: column;
+    }
+
+    .video,
+    .health-advice {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .health-advice {
+        img {
+            width: 100%;
+            height: 250px;
+        }
+    }
+}
