@@ -5,7 +5,7 @@ import FavoriteIcon from '@material-ui/icons/FavoriteRounded';
 function Footer() {
     return (
         <div className='footer'>
-            <a href='#'>
+            <a href='https://github.com/luonganh99/corona-tracker'>
                 <img src={GithubIcon} alt='github' />
             </a>
             <p className='made-by'>
