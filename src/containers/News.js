@@ -7,12 +7,12 @@ function News() {
         <div className='news'>
             <Card className='card-news'>
                 <CardContent>
-                    <rssapp-list id='l55RUj077gCglvef'></rssapp-list>
+                    <rssapp-list id='uSg0L5yEGU2w63Sv'></rssapp-list>
                 </CardContent>
             </Card>
             <Card className='card-news'>
                 <CardContent>
-                    <rssapp-list id='Duo1A3ixtji5pGB4'></rssapp-list>
+                    <rssapp-list id='u7skoXUTLojl6F8o'></rssapp-list>
                 </CardContent>
             </Card>
             <Card className='card-news'>
